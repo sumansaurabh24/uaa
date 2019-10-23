@@ -31,8 +31,8 @@ script:
   - ./mvnw -ntp clean verify
   - ./mvnw -ntp verify -Pprod -DskipTests jib:dockerBuild
   - docker images
-  - docker image tag appone sumansaurabh/appone
-  - docker push sumansaurabh/appone
+  - docker image tag appone sumansaurabh/uaa
+  - docker push sumansaurabh/uaa
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
