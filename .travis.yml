@@ -31,7 +31,7 @@ script:
   - ./mvnw -ntp clean verify
   - ./mvnw -ntp verify -Pprod -DskipTests jib:dockerBuild
   - docker images
-  - docker image tag appone sumansaurabh/uaa
+  - docker image tag uaa sumansaurabh/uaa
   - docker push sumansaurabh/uaa
 notifications:
   webhooks:
